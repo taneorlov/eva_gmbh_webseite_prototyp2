@@ -1364,3 +1364,40 @@ html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-c
     font-size: clamp(2.25rem, 8vw, 3.4rem) !important;
   }
 }
+
+/* v22 — keep all full-width colour bands within the same page frame.
+   Inner content dimensions, typography, images and breakpoints stay unchanged. */
+:root{--eva-page-frame:1440px}
+.site-header,
+.footer,
+.home .hero-v19,
+.home .offers,
+.home .services,
+.home .quote-section,
+.home .career-band{
+  width:100%;
+  max-width:var(--eva-page-frame)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+/* Preserve the section's existing spacing while constraining its background. */
+.home .offers,.home .services{box-sizing:border-box}
+
+/* v23: keep hero text inside the same page frame at any browser zoom.
+   The old viewport-based horizontal padding consumed the whole hero width
+   when the viewport became wider than the 1440px page frame. */
+.home .hero-v19{
+  padding-left:clamp(22px,3.2vw,46px)!important;
+  padding-right:clamp(22px,3.2vw,46px)!important;
+}
+.home .hero-v19-inner{
+  width:100%;
+  max-width:calc(var(--eva-page-frame) - 92px);
+  min-width:0;
+}
+.home .hero-v19-copy{
+  width:100%;
+  max-width:620px;
+  min-width:0;
+  box-sizing:border-box;
+}
