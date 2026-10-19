@@ -1295,3 +1295,57 @@ main{background:var(--page-grey)}
   .hero-image-v16>img{width:1180px;max-width:none}
   .hero-beratung-hotspot{left:77px;top:538px;width:200px;height:60px}
 }
+
+/* v18 — final hero cleanup: only the animated ticker remains below artwork */
+.hero-beratung-hotspot{
+  left:6.55%;
+  top:85.6%;
+  width:16.8%;
+  height:9.7%;
+}
+@media(max-width:760px){
+  .hero-beratung-hotspot{
+    left:77px;
+    top:380px;
+    width:200px;
+    height:43px;
+  }
+}
+
+/* v19: continuous full-width cool-grey hero and section backgrounds */
+:root{--eva-hero-cool:#edf0f2;--eva-offers-cool:#dfe4e8}
+html,body{background:#e8ecef}
+.hero-v19{background:var(--eva-hero-cool);width:100%;margin:0;padding:clamp(38px,4.2vw,72px) max(22px,calc((100vw - 1440px)/2));box-sizing:border-box}
+.hero-v19-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);align-items:center;gap:0}
+.hero-v19-copy{padding:20px clamp(16px,3vw,46px) 20px 0;align-self:center}
+.hero-v19-eyebrow{font-size:.83rem;font-weight:750;letter-spacing:.2em;color:#3e4c57;margin:0 0 22px}
+.hero-v19-copy h1{font-size:clamp(2.25rem,3.5vw,3.85rem);line-height:1.08;letter-spacing:-.035em;color:#c91727;margin:0 0 24px;font-weight:800}
+.hero-v19-description{font-size:clamp(.97rem,1.15vw,1.12rem);line-height:1.65;color:#37434d;max-width:570px;margin:0 0 25px}
+.hero-v19-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-v19-actions .btn{font-size:.96rem;padding:13px 23px;min-height:0}
+.hero-v19-secondary{background:transparent!important;color:#bd1827!important;border:1.5px solid #bd1827!important}
+.hero-v19-secondary:hover,.hero-v19-secondary:focus-visible{background:#bd1827!important;color:#fff!important}
+.hero-v19-graphic{min-width:0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-v19-graphic img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.home .offers{background:var(--eva-offers-cool)!important;border-radius:0!important;padding-top:clamp(34px,4vw,58px)!important;margin-top:0!important}
+.home .services{background:#e8ecef!important;border-radius:0!important}
+.home .offers .offers-head h2,.home .services .services-head h2{color:#c91727!important}
+@media(max-width:800px){.hero-v19{padding:28px 20px}.hero-v19-inner{grid-template-columns:1fr}.hero-v19-copy{padding:8px 0 22px}.hero-v19-copy h1{font-size:clamp(2.25rem,8vw,3.4rem)}.hero-v19-graphic{max-width:700px;margin:auto}}
+
+/* v20: cold grey full-width section bands, responsive width constraints */
+:root{--eva-light-cool:#e8edf1;--eva-dark-cool:#d7dfe5;--eva-content-max:1440px}
+html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-cool)}
+.site-header,.footer,.home .hero-v19,.home .offers,.home .services,.home .quote-section,.home .career-band{width:100%;max-width:100%;box-sizing:border-box}
+.site-header .header-inner,.footer .footer-grid,.footer .footer-bottom{max-width:var(--eva-content-max);margin-left:auto;margin-right:auto}
+.home .hero-v19{background:var(--eva-light-cool)!important;min-height:480px;padding-top:clamp(48px,6vw,90px);padding-bottom:clamp(48px,6vw,90px)}
+.home .hero-v19-inner{display:block!important;max-width:var(--eva-content-max);margin:0 auto}
+.home .hero-v19-copy{max-width:620px;margin:0;padding:20px clamp(16px,3vw,46px) 20px 0}
+.home .hero-v19-graphic{display:none!important}
+.home .offers{background:var(--eva-dark-cool)!important}
+.home .offers .offer-card,.home .offers .offer-card .card-copy{background:var(--eva-light-cool)!important}
+.home .services{background:var(--eva-light-cool)!important}
+.home .quote-section{background:var(--eva-dark-cool)!important;max-width:100%!important}
+.home .quote-panel{background:var(--eva-dark-cool)!important}
+.home .career-band{max-width:100%!important}
+.home .section-head,.home .offer-grid,.home .service-grid{max-width:min(var(--eva-content-max),calc(100% - 40px));margin-left:auto;margin-right:auto}
+@media(max-width:800px){.home .hero-v19{min-height:0;padding:40px 22px}.home .hero-v19-copy{padding:0;max-width:620px}.home .quote-section{height:auto!important}.home .career-band{height:auto!important}}
