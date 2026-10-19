@@ -1349,3 +1349,18 @@ html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-c
 .home .career-band{max-width:100%!important}
 .home .section-head,.home .offer-grid,.home .service-grid{max-width:min(var(--eva-content-max),calc(100% - 40px));margin-left:auto;margin-right:auto}
 @media(max-width:800px){.home .hero-v19{min-height:0;padding:40px 22px}.home .hero-v19-copy{padding:0;max-width:620px}.home .quote-section{height:auto!important}.home .career-band{height:auto!important}}
+
+/* v21: match home section headings to the hero headline */
+.home .offers .offers-head h2,
+.home .services .services-head h2 {
+  font-size: clamp(2.25rem, 3.5vw, 3.85rem) !important;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  font-weight: 800;
+}
+@media (max-width: 800px) {
+  .home .offers .offers-head h2,
+  .home .services .services-head h2 {
+    font-size: clamp(2.25rem, 8vw, 3.4rem) !important;
+  }
+}
