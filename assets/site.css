@@ -1401,3 +1401,30 @@ html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-c
   min-width:0;
   box-sizing:border-box;
 }
+
+/* v24: consistent inner-page heroes, cool-grey surfaces and contextual navigation */
+.detail-hero{height:430px;min-height:430px;background:var(--page-grey);grid-template-columns:1.08fr .92fr}
+.detail-image{height:430px;min-height:0;overflow:hidden}
+.detail-image img{display:block;width:100%;height:100%;object-fit:cover}
+.detail-title{background:var(--page-grey)!important}
+.detail-content{background:var(--page-grey)}
+.career-hero{background:var(--page-grey);min-height:430px}
+.career-hero>div{background:var(--page-grey)}
+.home .career-band{grid-template-columns:1fr!important;background:var(--page-grey-2)!important}
+.home .career-band>.career-copy{background:var(--page-grey-2)!important}
+.home .cta-card.aktuelles{background:var(--page-grey)!important}
+@media(max-width:800px){
+ .detail-hero{height:auto;min-height:0;grid-template-columns:1fr}
+ .detail-image{height:300px}
+ .detail-image img{height:100%}
+}
+
+/* v25: Aktuelles visibly restored as a matching tile beside Spenden. */
+.home .split-cta .cta-card.aktuelles{
+  background:var(--eva-light-cool,#e8edf1)!important;
+  border:1px solid #cbd4db;
+  border-radius:20px;
+  box-shadow:0 10px 28px rgba(43,60,72,.09);
+  opacity:1;
+  visibility:visible;
+}
