@@ -1428,3 +1428,99 @@ html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-c
   opacity:1;
   visibility:visible;
 }
+
+/* v26: image integrated into the right half of the homepage hero */
+.home .hero-v19-inner{display:grid!important;grid-template-columns:minmax(0,46%) minmax(0,54%);align-items:center;gap:clamp(20px,3vw,42px);max-width:calc(var(--eva-page-frame) - 92px)}
+.home .hero-v19-copy{width:100%;max-width:620px;padding-right:0}
+.home .hero-v26-image{min-width:0;width:100%;height:clamp(340px,33vw,490px);overflow:hidden;border-radius:0 0 32px 0}
+.home .hero-v26-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:800px){.home .hero-v19-inner{grid-template-columns:1fr;gap:20px}.home .hero-v26-image{height:clamp(220px,48vw,360px)}}
+
+/* v27 — header composition per Entwurf Header_neu, page 1. */
+.home .hero-v19{
+  width:100%!important;max-width:none!important;
+  margin:0!important;padding:0!important;
+  min-height:0!important;background:#e9edf1!important;
+  border-radius:0!important;
+}
+.home .hero-v19-inner{
+  display:grid!important;grid-template-columns:42% 58%!important;
+  gap:0!important;align-items:stretch!important;
+  width:100%!important;max-width:none!important;
+  margin:0!important;min-width:0;
+}
+.home .hero-v19-copy{
+  max-width:none!important;width:100%!important;min-width:0;
+  padding:clamp(35px,4.4vw,76px) clamp(22px,3vw,55px) clamp(35px,4.4vw,76px) max(24px,calc((100vw - 1348px)/2))!important;
+  box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;
+}
+.home .hero-v26-image{
+  width:100%!important;height:auto!important;min-height:clamp(370px,33vw,560px);
+  overflow:hidden;border-radius:0!important;align-self:stretch;
+}
+.home .hero-v26-image img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+  object-position:center center!important;border-radius:0!important;
+}
+@media(max-width:800px){
+ .home .hero-v19-inner{grid-template-columns:1fr!important}
+ .home .hero-v19-copy{padding:40px 22px!important}
+ .home .hero-v26-image{min-height:0;height:auto!important;aspect-ratio:1398/722}
+}
+
+/* v28: preserve the complete user-supplied hero artwork, including the red graphic at right. */
+.home .hero-v26-image{background:#e9edf1!important;min-height:0!important;display:flex;align-items:center;justify-content:center}
+.home .hero-v26-image img{width:100%!important;height:auto!important;max-height:100%!important;object-fit:contain!important;object-position:center center!important}
+@media(max-width:800px){.home .hero-v26-image{aspect-ratio:auto!important}.home .hero-v26-image img{max-height:none!important}}
+
+/* v29: flush hero image, full artwork visible without cropping. */
+.home .hero-v19-inner{align-items:stretch!important}
+.home .hero-v26-image{height:auto!important;min-height:0!important;align-self:stretch!important;display:block!important;overflow:visible!important;aspect-ratio:auto!important}
+.home .hero-v26-image img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;vertical-align:bottom!important}
+@media(max-width:800px){.home .hero-v26-image{height:auto!important;min-height:0!important}.home .hero-v26-image img{width:100%!important;height:auto!important}}
+
+/* v30: remove the gap below the full, uncropped hero image.
+   Let the artwork determine hero height rather than the text column padding. */
+@media (min-width:801px){
+ .home .hero-v19-copy{padding-top:12px!important;padding-bottom:12px!important}
+ .home .hero-v19-inner{align-items:stretch!important}
+ .home .hero-v26-image{align-self:end!important}
+ .home .hero-v26-image img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
+}
+.home .hero-v19{margin-bottom:0!important;padding-bottom:0!important}
+.home .hero-v19-inner{margin-bottom:0!important;padding-bottom:0!important}
+.home .hero-v26-image{margin-bottom:0!important;padding-bottom:0!important}
+
+/* v31: responsive image bounds and footer two-column layout. */
+.home .hero-v19{box-sizing:border-box!important;max-width:var(--eva-page-frame)!important;width:100%!important;overflow:hidden!important}
+.home .hero-v19-inner{width:100%!important;max-width:100%!important;min-width:0!important;grid-template-columns:minmax(0,42%) minmax(0,58%)!important}
+.home .hero-v19-copy,.home .hero-v26-image{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+.home .hero-v26-image{width:100%!important;overflow:hidden!important}
+.home .hero-v26-image img{width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;display:block!important}
+.detail-hero{width:100%!important;max-width:var(--eva-page-frame)!important;box-sizing:border-box!important;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important}
+.detail-hero .detail-image,.detail-hero .detail-title{min-width:0!important;max-width:100%!important;box-sizing:border-box!important}
+.detail-hero .detail-image img{display:block!important;width:100%!important;max-width:100%!important;height:100%!important;object-fit:cover!important}
+.footer .footer-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.7fr)!important;gap:clamp(24px,4vw,54px)!important}
+@media(max-width:800px){
+ .home .hero-v19-inner,.detail-hero{grid-template-columns:minmax(0,1fr)!important}
+ .home .hero-v26-image{height:auto!important}
+ .detail-hero .detail-image{height:300px!important}
+ .footer .footer-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+
+/* v32: both hero images belong to the same responsive page grid as their text. */
+@media (min-width:801px){
+ .home .hero-v19{width:100%!important;max-width:var(--eva-page-frame)!important;margin-inline:auto!important;padding:0!important}
+ .home .hero-v19-inner{display:grid!important;grid-template-columns:minmax(0,42%) minmax(0,58%)!important;gap:0!important;width:100%!important;max-width:none!important;align-items:stretch!important}
+ .home .hero-v19-copy{min-width:0!important;width:100%!important;max-width:none!important;padding:clamp(20px,3vw,45px)!important}
+ .home .hero-v26-image{min-width:0!important;max-width:none!important;width:100%!important;height:100%!important;align-self:stretch!important;position:relative!important;overflow:hidden!important}
+ .home .hero-v26-image img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:none!important;object-fit:contain!important;object-position:center right!important}
+}
+.career-hero{width:100%!important;max-width:var(--eva-page-frame)!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;box-sizing:border-box!important}
+.career-hero>div{min-width:0!important;box-sizing:border-box!important;padding:clamp(24px,4vw,70px)!important}
+.career-hero>img{display:block!important;min-width:0!important;max-width:100%!important;width:100%!important;height:100%!important;object-fit:cover!important;box-sizing:border-box!important}
+@media(max-width:800px){
+ .home .hero-v19-inner,.career-hero{grid-template-columns:minmax(0,1fr)!important}
+ .home .hero-v26-image img{height:auto!important;width:100%!important;object-fit:contain!important}
+ .career-hero>img{height:auto!important;aspect-ratio:16/9;object-fit:cover!important}
+}
