@@ -1538,3 +1538,79 @@ html,body{width:100%;max-width:100%;overflow-x:clip;background:var(--eva-light-c
   .site-header .header-inner{height:78px!important}
   .site-header .logo-image-link img{max-height:52px!important;width:auto!important;max-width:min(300px,26vw)!important;object-fit:contain!important}
 }
+
+/* v34 — compact desktop composition: preserve normal type size and content. */
+@media (min-width: 801px) {
+  .site-header .header-inner {height:68px!important;max-width:1200px!important;padding:0 24px!important;gap:18px!important}
+  .site-header .logo-image-link img {max-height:43px!important;max-width:245px!important;width:auto!important}
+  .site-header .main-nav {gap:clamp(12px,1.65vw,25px)!important;font-size:.91rem!important}
+  .site-header .main-nav>a,.site-header .nav-item>a {padding-top:20px!important;padding-bottom:20px!important}
+  .site-header .dropdown {top:60px!important}
+  .home .hero-v19 {min-height:0!important;height:auto!important}
+  .home .hero-v19-inner {width:100%!important;max-width:1200px!important;margin:0 auto!important;grid-template-columns:minmax(0,46%) minmax(0,54%)!important;align-items:stretch!important;gap:0!important}
+  .home .hero-v19-copy {padding:22px 34px 24px 24px!important;justify-content:center!important}
+  .home .hero-v19-eyebrow {font-size:.72rem!important;margin-bottom:12px!important}
+  .home .hero-v19-copy h1 {font-size:clamp(2.25rem,3.1vw,3.25rem)!important;line-height:1.06!important;margin-bottom:15px!important}
+  .home .hero-v19-description {font-size:clamp(.9rem,1vw,1rem)!important;line-height:1.5!important;margin-bottom:18px!important}
+  .home .hero-v19-actions .btn {padding:10px 17px!important;font-size:.88rem!important}
+  .home .hero-v26-image {height:auto!important;min-height:0!important;aspect-ratio:auto!important;align-self:stretch!important;overflow:hidden!important}
+  .home .hero-v26-image img {width:100%!important;height:100%!important;object-fit:cover!important;object-position:center right!important}
+  .home .offers,.home .services {padding-top:48px!important;padding-bottom:54px!important}
+  .home .offers .offers-head {max-width:1080px!important;margin-bottom:30px!important}
+  .home .offers .offers-head .intro {padding-top:16px!important;font-size:1rem!important;line-height:1.55!important}
+  .home .offers .offers-head h2,.home .services .services-head h2 {font-size:clamp(2.35rem,3vw,3.2rem)!important}
+  .home .offers .offers-head h2:after {margin-top:13px!important}
+  .home .offer-grid,.home .service-grid {max-width:1080px!important;margin-left:auto!important;margin-right:auto!important}
+  .home .offer-grid {gap:15px!important;margin-bottom:15px!important}
+  .home .offer-card {min-height:0!important;grid-template-rows:175px 1fr!important}
+  .home .offer-card.featured {grid-template-rows:255px!important}
+  .home .offer-card .card-copy {padding:18px 20px!important}
+  .home .offer-card.featured .card-copy {padding:25px!important}
+  .home .offer-card.featured h3 {font-size:1.8rem!important}
+  .home .service-grid {gap:16px!important}
+  .home .service-tile {height:285px!important}
+  .home .services .services-head {max-width:1080px!important;margin-bottom:30px!important}
+}
+@media (min-width:801px) and (max-width:1050px){
+  .home .hero-v19-copy {padding:18px 24px!important}
+  .home .hero-v19-copy h1 {font-size:clamp(2rem,3.4vw,2.5rem)!important}
+  .home .hero-v19-description {font-size:.88rem!important}
+}
+
+/* v35: keep the hero image flush with the right boundary of the site.
+   Compact content is achieved with inner padding, not a narrowed hero grid. */
+@media (min-width:801px){
+  .home .hero-v19{width:100%!important;max-width:var(--eva-page-frame)!important;margin-inline:auto!important;padding:0!important}
+  .home .hero-v19-inner{width:100%!important;max-width:none!important;margin:0!important;grid-template-columns:minmax(0,52%) minmax(0,48%)!important;gap:0!important;align-items:stretch!important}
+  .home .hero-v19-copy{padding:20px 30px 20px clamp(24px,calc((100vw - 1152px)/2),144px)!important;min-width:0!important}
+  .home .hero-v26-image{width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;aspect-ratio:1420/936!important;align-self:stretch!important;margin:0!important;overflow:hidden!important}
+  .home .hero-v26-image img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important;margin:0!important}
+}
+@media (min-width:801px) and (max-width:1050px){
+  .home .hero-v19-copy{padding:18px 22px!important}
+}
+
+/* v36: 1/3 editorial text, 2/3 photograph. Compact, edge-to-edge hero. */
+@media (min-width: 801px) {
+  .home .hero-v19 { width:100%!important;max-width:var(--eva-page-frame)!important;margin:0 auto!important;padding:0!important;min-height:0!important; }
+  .home .hero-v19-inner { display:grid!important;grid-template-columns:minmax(0, 33.3333%) minmax(0, 66.6667%)!important;grid-template-rows:minmax(0, auto)!important;align-items:stretch!important;gap:0!important;width:100%!important;max-width:none!important; }
+  .home .hero-v19-copy { min-width:0!important;max-width:none!important;width:100%!important;box-sizing:border-box!important;padding:clamp(22px,2.3vw,38px) clamp(18px,2.2vw,34px) clamp(22px,2.3vw,38px) clamp(22px,3vw,60px)!important;display:flex!important;flex-direction:column!important;justify-content:center!important; }
+  .home .hero-v19-copy h1 { font-size:clamp(1.95rem,2.55vw,2.95rem)!important;line-height:1.06!important;margin-bottom:14px!important; }
+  .home .hero-v19-eyebrow {font-size:clamp(.61rem,.7vw,.73rem)!important;letter-spacing:.15em!important;margin-bottom:11px!important;}
+  .home .hero-v19-description {font-size:clamp(.78rem,.91vw,.97rem)!important;line-height:1.47!important;margin-bottom:15px!important;}
+  .home .hero-v19-actions {display:flex!important;flex-wrap:wrap!important;gap:10px!important;}
+  .home .hero-v19-actions .btn {padding:9px 13px!important;font-size:clamp(.74rem,.81vw,.86rem)!important;}
+  .home .hero-v26-image {position:relative!important;display:block!important;min-width:0!important;width:100%!important;height:clamp(385px,27vw,480px)!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;overflow:hidden!important;margin:0!important;align-self:stretch!important;}
+  .home .hero-v26-image img {position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:right bottom!important;margin:0!important;}
+}
+@media (min-width:801px) and (max-width:1100px) {
+  .home .hero-v19-copy {padding:18px 18px!important;}
+  .home .hero-v19-copy h1 {font-size:clamp(1.75rem,2.8vw,2.25rem)!important;}
+  .home .hero-v19-description {font-size:.78rem!important;}
+  .home .hero-v26-image {height:410px!important;}
+}
+@media (max-width:800px) {
+  .home .hero-v19-inner {grid-template-columns:minmax(0,1fr)!important;}
+  .home .hero-v26-image {height:auto!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;}
+  .home .hero-v26-image img {position:static!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
+}
