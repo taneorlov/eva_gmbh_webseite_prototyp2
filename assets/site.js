@@ -28,3 +28,18 @@ document.querySelector('.menu-toggle')?.addEventListener('click',()=>document.qu
     if (e.key === 'Escape' && !modal.hidden) closeDonation();
   });
 })();
+
+/* v41: equal natural row heights, recompute on resize and font load. */
+(() => {
+ const top=document.querySelector('.campus-top-grid'), next=document.querySelector('.campus-second-grid');
+ if(!top || !next) return;
+ const media=matchMedia('(min-width:761px)');
+ function sync(){
+   top.style.minHeight=''; next.style.minHeight='';
+   if(!media.matches) return;
+   const h=Math.ceil(Math.max(top.getBoundingClientRect().height,next.getBoundingClientRect().height));
+   top.style.minHeight=next.style.minHeight=h+'px';
+ }
+ window.addEventListener('resize',sync); window.addEventListener('load',sync);
+ document.fonts?.ready.then(sync); sync();
+})();
